@@ -32,10 +32,24 @@ export class PearsonUsers extends Component {
   }
 
   render() {
+    const { users } = this.state;
+
     return (
-      <div className="pearon-users">
-        <h1>Pearson User Management</h1>
-        {/* Render users here */}
+      <div className="pearson-users">
+        <h1 className="title">Pearson User Management</h1>
+        <div className="user-profiles">
+          {
+            users.map(user => {
+              return (
+                <li className="user-profile" key={user.id}>
+                  <img className="user-avatar" src={user.avatar} alt="avatar"/>
+                  <h2 className="user-full-name">{`${user.first_name} ${user.last_name}`}</h2>
+                  <button className="delete-btn">Delete</button>
+                </li>
+              )
+            })
+          }
+        </div>
       </div>
     );
   }

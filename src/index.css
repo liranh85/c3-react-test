@@ -3,3 +3,54 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.pearson-users .title {
+  font-size: 36px;
+  color: #007fa3;
+  font-weight: 400;
+  padding-left: 37px;
+  padding-right: 37px;
+}
+
+.pearson-users .user-profiles {
+  background-color: #d8d8d8;
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 75px;
+}
+
+.pearson-users .user-profile {
+  list-style: none;
+  width: 212px;
+  height: 120px;
+  background-color: white;
+  position: relative;
+  margin-left: 37px;
+}
+
+.pearson-users .user-avatar {
+  width: 80px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: -40px;
+}
+
+.pearson-users .user-full-name {
+  margin-top: 60px;
+  font-size: 18px;
+  color: #e93939;
+  font-weight: 400;
+  text-align: center;
+}
+
+.pearson-users .delete-btn {
+  font-size: 14px;
+  color: #007fa3;
+  border: none;
+  padding: 0;
+  margin-left: 10px;
+  cursor: pointer;
+}

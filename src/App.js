@@ -77,6 +77,6 @@ export const App = () => (
         </p>
       </li>
     </ol>
-    <img width="600" alt="preview" src="https://i.imgur.com/NbG7tJQ.png" />
+    <img alt="preview" src="https://i.imgur.com/NbG7tJQ.png" />
   </main>
 );
