@@ -1,10 +1,24 @@
 import React, { Component } from "react";
 
-export class PearsonUsers extends Component {
+export default class PearsonUsers extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
+    this.state = PearsonUsers.getInitialState();
+  }
+
+  static getDerivedStateFromProps(nextProps, prevState) {
+    const initialState = PearsonUsers.getInitialState();
+    return {
+      users: [
+        ...initialState.users,
+        ...nextProps.additionalUsers || {}
+      ]
+    }
+  }
+
+  static getInitialState () {
+    return {
       users: [
         {
           id: 4,
@@ -28,7 +42,7 @@ export class PearsonUsers extends Component {
             "https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg"
         }
       ]
-    };
+    }
   }
 
   render() {
