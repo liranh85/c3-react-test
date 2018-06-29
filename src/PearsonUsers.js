@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PearsonUser from './PearsonUser';
 
 export default class PearsonUsers extends Component {
 
@@ -12,11 +13,11 @@ export default class PearsonUsers extends Component {
           {
             users && users.map(user => {
               return (
-                <li className="user-profile" key={user.id}>
-                  <img className="user-avatar" src={user.avatar} alt="avatar"/>
-                  <h2 className="user-full-name">{`${user.first_name} ${user.last_name}`}</h2>
-                  <button className="delete-btn" onClick={() => onClickDelete(user.id)}>Delete</button>
-                </li>
+                <PearsonUser
+                  {...user}
+                  key={user.id}
+                  onClickDelete={onClickDelete}
+                />
               )
             })
           }
