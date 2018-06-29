@@ -1,6 +1,6 @@
 import React, { PureComponent } from "react";
 import { connect } from 'react-redux';
-import { load as loadUsers } from './redux/modules/users';
+import { load as loadUsers, deleteUser } from './redux/modules/users';
 import PearsonUsers from "./PearsonUsers";
 
 class App extends PureComponent {
@@ -11,11 +11,14 @@ class App extends PureComponent {
   }
 
   render () {
-    const { users } = this.props;
+    const { deleteUser, users } = this.props;
 
     return (
       <main>
-        <PearsonUsers additionalUsers={users.items.data} />
+        <PearsonUsers
+          users={users.items}
+          onClickDelete={deleteUser}
+        />
         <hr />
 
         <p>
@@ -103,7 +106,8 @@ function mapStateToProps (state) {
 
 function mapDispatchToProps (dispatch) {
   return {
-    loadUsers: () => dispatch(loadUsers())
+    loadUsers: () => dispatch(loadUsers()),
+    deleteUser: (id) => dispatch(deleteUser(id))
   }
 }
 
