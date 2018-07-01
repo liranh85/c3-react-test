@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import PearsonUser from './PearsonUser';
+import PearsonUser from '../components/PearsonUser';
+import avatarPlaceholder from '../images/avatar-placeholder.png';
 import testImage from './test-image.png';
-import avatarPlaceholder from './images/avatar-placeholder.png';
 
 describe("PearsonUser", () => {
   let component;

@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import avatarPlaceholder from './images/avatar-placeholder.png'
+import avatarPlaceholder from '../images/avatar-placeholder.png'
 
 export default class PearsonUser extends PureComponent {
   constructor (props) {

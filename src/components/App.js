@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { load as loadUsers, deleteUser } from './redux/modules/users';
+import { load as loadUsers, deleteUser } from '../redux/modules/users';
 import PearsonUsers from "./PearsonUsers";
 
 class App extends PureComponent {
