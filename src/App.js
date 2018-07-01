@@ -1,12 +1,12 @@
-import React, { PureComponent } from "react";
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { load as loadUsers, deleteUser } from './redux/modules/users';
 import PearsonUsers from "./PearsonUsers";
 
 class App extends PureComponent {
   constructor (props) {
-    super(props)
-
+    super(props);
     this.props.loadUsers();
   }
 
@@ -110,5 +110,15 @@ function mapDispatchToProps (dispatch) {
     deleteUser: (id) => dispatch(deleteUser(id))
   }
 }
+
+PearsonUsers.defaultProps = {
+  users: []
+};
+
+App.propTypes = {
+  users: PropTypes.object,
+  deleteUser: PropTypes.func.isRequired,
+  loadUsers: PropTypes.func.isRequired
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App)
