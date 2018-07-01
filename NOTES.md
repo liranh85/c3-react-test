@@ -12,3 +12,8 @@
 ## Added in refactor:
   * PearsonUser: if avatar was not supplied, or if image failed to load, use avatar-placeholder.png
   * PropTypes and default props
+
+## Tests
+My testing experience is unfortunately very limited. For this code challenge I learned the absolute basics of how to use Enzyme to create unit tests for React components. I added some basic tests to PearsonUsers and PearsonUser to demonstrate what I've just learned.
+
+Having said that, I am happy to brush up on testing prior to starting the role.
